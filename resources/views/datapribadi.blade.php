@@ -24,6 +24,7 @@
                   <li><a class="dropdown-item" href="/pendidikan">Pendidikan</a></li>
                   <li><a class="dropdown-item" href="/kontak">Kontak</a></li>
                   <li><a class="dropdown-item" href="/pengalaman">Pengalaman</a></li>
+                  <li><a class="dropdown-item" href="/lihatkrs">Lihat KRS</a></li>
                 </ul>
               </li>
             </ul>

@@ -36,3 +36,6 @@ Route::get('/kontak', function () {
     return view('kontak');
 });
 
+Route::get('/lihatkrs', function () {
+    return view('lihatkrs');
+});

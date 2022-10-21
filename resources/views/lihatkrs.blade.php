@@ -32,23 +32,86 @@
           </div>
         </div>
       </nav>
-      <style>
-        body{
-            background-image: url("background.jpg")
-          }
-      </style>
-        <header style="text-align: center;">
-          <h1> </h1>
-          <img src="portrait.jpg" width="200" height="200" style="border-radius: 50%;"/>
-            <h1>Sabrina Jovanka</h1>
-            <p>(Graphic Designer)</p>
-        </header>
-        <hr />
-        <article style="text-align: center;">
-            <h2>Overview</h2>
-            <p>
-                Hi, saya adalah Sabrina Jovanka dan saya saat ini sedang menganggur.
-            </p>
-        </article>
+
+    <div>
+      <h4>Nama       
+        <?php
+        $nama = DB::table('mahasiswa')
+        ->where('id', '1')
+        ->value('Nama');
+        echo $nama;
+        ?></h4>
+    </div>
+    
+    <div>
+      <h4>NIM       
+        <?php
+            $studentID = DB::table('mahasiswa')
+            ->where('id', '1')
+            ->value('StudentID');
+            echo $studentID;
+        ?></h4>
+    </div>
+
+    <div>
+      <h4>Term       
+        <?php
+        $term = DB::table('mahasiswa')
+        ->where('id', '1')
+        ->value('term');
+        echo $term;
+    ?></h4>
+    </div>
+
+    <div>
+      <h4>SKS       
+        <?php
+        $total=0;
+        $id=1;
+        while($id<7){                    
+            $temp = $total + DB::table('matakuliah')->where('id_matkul',$id)->value('sks');
+            $total = $temp;
+            $id++;
+        }
+        echo $total;
+    ?></h4>
+    </div>
+    <hr>
+
+        <table width="700px">
+            <tr>
+                <th>No.</th>
+                <th>Kode Mata Kuliah</th>
+                <th>Nama Mata Kuliah</th>
+                <th style='text-align:center'>SKS</th>
+            </tr>
+            <?php
+                $no=1;
+                while ($no<7) {
+                    
+                    $kodematkul = DB::table('matakuliah')
+                    ->where('id_matkul', $no)
+                    ->value('kode_matakuliah');
+
+                    $namamatkul = DB::table('matakuliah')
+                    ->where('id_matkul', $no)
+                    ->value('nama_matakuliah');
+
+                    $sks = DB::table('matakuliah')
+                    ->where('id_matkul', $no)
+                    ->value('sks');
+
+                    echo "<tr>";
+                    echo "<td>".$no."</td>";                        
+                    echo "<td>".$kodematkul."</td>";
+                    echo "<td>".$namamatkul."</td>";
+                    echo "<td style='text-align:center'>".$sks."</td>";
+                    echo "</tr>";
+
+                    $no++;
+                }  
+            ?>
+        
+        </table>
     </body>
 </html>

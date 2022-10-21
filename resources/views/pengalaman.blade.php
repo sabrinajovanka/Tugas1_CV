@@ -17,6 +17,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/welcome">Home</a>
                 </li>
+     
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     More
@@ -26,6 +27,7 @@
                     <li><a class="dropdown-item" href="/pendidikan">Pendidikan</a></li>
                     <li><a class="dropdown-item" href="/kontak">Kontak</a></li>
                     <li><a class="dropdown-item" href="/pengalaman">Pengalaman</a></li>
+                    <li><a class="dropdown-item" href="/lihatkrs">Lihat KRS</a></li>
                     </ul>
                 </li>
                 </ul>
