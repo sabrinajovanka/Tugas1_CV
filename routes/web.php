@@ -39,3 +39,7 @@ Route::get('/kontak', function () {
 Route::get('/lihatkrs', function () {
     return view('lihatkrs');
 });
+
+Route::get('/appSabrina', function () { 
+    return view('appSabrina'); 
+});
